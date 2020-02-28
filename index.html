@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inventario PCs Avril Assistance</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/ccs/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Avril Assistance</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/" class="waves-effect"><i class="material-icons">home</i> Home</a></li>
+        <li><a href="/add.html" class="waves-effect"><i class="material-icons">fingerprint</i>Add</a></li>
+        <li><a href="/notes.html" class="waves-effect"><i class="material-icons">event_note</i>Notas</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/" class="waves-effect"><i class="material-icons">home</i> Home</a></li>
+      <li><a href="/add.html" class="waves-effect"><i class="material-icons">fingerprint</i>Add</a></li>
+      <li><a href="/notes.html" class="waves-effect"><i class="material-icons">event_note</i>Notas</a></li>
+  </ul>
+
+  <!-- computadoras -->
+  <div class="container">
+    
+    <div class="row white-text">
+      <div class="card-panel col s3 blue darken-3">
+        <img src="/img/desktop.png" alt="computer">
+        <div class="computer-details">
+          <div class="computer-title"><i class="material-icons left">person</i>Martin Ortiz</div>
+          <div class="computer-description">
+            <p><i class="material-icons left">desktop_windows</i>AACP-001</p>
+            <p><i class="material-icons left">business_center</i>Departamento</p>
+            <p><i class="material-icons left">bug_report</i>Procesador</p>
+            <p><i class="material-icons left">network_check</i>Ram</p>
+            <p><i class="material-icons left">apps</i>Serial</p>
+          </div>
+        </div>
+        <div class="more center">
+          <a href="#" class="btn"><i class="material-icons left">add_circle</i> Ver Mas</a>
+        </div>
+      </div>
+
+      <div class="card-panel col s3 blue darken-3">
+        <img src="/img/desktop.png" alt="computer">
+        <div class="computer-details">
+          <div class="computer-title"><i class="material-icons left">person</i>Martin Ortiz</div>
+          <div class="computer-description">
+            <p><i class="material-icons left">desktop_windows</i>AACP-001</p>
+            <p><i class="material-icons left">business_center</i>Departamento</p>
+            <p><i class="material-icons left">bug_report</i>Procesador</p>
+            <p><i class="material-icons left">network_check</i>Ram</p>
+            <p><i class="material-icons left">apps</i>Serial</p>
+          </div>
+        </div>
+        <div class="more center">
+          <a href="#" class="btn"><i class="material-icons left">add_circle</i> Ver Mas</a>
+        </div>
+      </div>
+
+      <div class="card-panel col s3 blue darken-3">
+        <img src="/img/desktop.png" alt="computer">
+        <div class="computer-details">
+          <div class="computer-title"><i class="material-icons left">person</i>Martin Ortiz</div>
+          <div class="computer-description">
+            <p><i class="material-icons left">desktop_windows</i>AACP-001</p>
+            <p><i class="material-icons left">business_center</i>Departamento</p>
+            <p><i class="material-icons left">bug_report</i>Procesador</p>
+            <p><i class="material-icons left">network_check</i>Ram</p>
+            <p><i class="material-icons left">apps</i>Serial</p>
+          </div>
+        </div>
+        <div class="more center">
+          <a href="#" class="btn"><i class="material-icons left">add_circle</i> Ver Mas</a>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCuFI59y7BG82p8QBY4WTs6Mnwzh_APR4Y",
+      authDomain: "avril-assistance.firebaseapp.com",
+      databaseURL: "https://avril-assistance.firebaseio.com",
+      projectId: "avril-assistance",
+      storageBucket: "avril-assistance.appspot.com",
+      messagingSenderId: "1036153922340",
+      appId: "1:1036153922340:web:691307faa5d5fcb2d589b1"
+    };
+    const db = firebase.collection('computadoras');
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/db.js"></script>
+</body>
+</html>
