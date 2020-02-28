@@ -1,8 +1,8 @@
 // initialize side-nav
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, options);
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   var elems = document.querySelectorAll('.sidenav');
+//   var instances = M.Sidenav.init(elems, options);
+// });
 
 const computers = document.querySelector('.computers');
 
@@ -10,7 +10,7 @@ const computers = document.querySelector('.computers');
 const renderComputer = (data, id) => {
 
   const html = `
-    <div class="card-panel col s4 blue darken-3">
+    <div class="card-panel col s4 blue darken-3 data-id="${id}">
       <img src="/img/desktop.png" alt="computer">
       <div class="computer-details center">
         <div class="computer-title"><i class="material-icons">person</i> ${data.nombre}</div>
@@ -22,11 +22,22 @@ const renderComputer = (data, id) => {
           <p><i class="material-icons">apps</i> ${data.serial}</p>
         </div>
       </div>
-      <div class="ver-mas center">
-        <a href="#" class="btn"><i class="material-icons left">add_circle</i> Ver Mas</a>
+      <div class="info row">
+        <div class="col s6">
+          <a href="#" class="btn"><i class="material-icons left">add_circle</i> Ver Mas</a>
+        </div>
+        <div class="col s6 data-id="${id}">
+          <a href="#" class="btn"><i class="material-icons left">remove_circle</i> Borrar</a>
+        </div>
       </div>
     </div>
   `;
   computers.innerHTML += html;
 
+};
+
+// remove computer
+const removeComputer = (id) => {
+  const computer = document.querySelector(`.info[data-id=${id}]`);
+  computer.remove();
 };
