@@ -26,7 +26,7 @@ form.addEventListener('submit', evt => {
     marca: form.marca.value,
     modelo: form.modelo.value,
     procesador: form.procesador.value,
-    memoria_ram: form.tipo_pc.value,
+    memoria_ram: form.memoria_ram.value,
     slots: form.slots.value,
     tipo_mem: form.tipo_mem.value,
     ip: form.ip.value,
@@ -49,6 +49,7 @@ form.addEventListener('submit', evt => {
   form.tipo_pc.value = '';
   form.slots.value = '';
   form.tipo_mem.value = '';
+  form.memoria_ram.value = '';
   form.ip.value = '';
   form.serial.value = '';
   form.sistema_o.value = '';
@@ -56,11 +57,11 @@ form.addEventListener('submit', evt => {
 });
 
 // remove a computer
-const computerContainer = document.querySelector('.computers');
-computerContainer.addEventListener('click', evt => {
-  if(evt.target.tagName === 'I'){
-    const id = evt.target.getAttribute('data-id');
-    //console.log(id);
-    db.collection('computadoras').doc(id).delete();
-  }
-});
+// const computerContainer = document.querySelector('.computers');
+// computerContainer.addEventListener('click', evt => {
+//   if(evt.target.tagName === 'I'){
+//     const id = evt.target.getAttribute('data-id');
+//     //console.log(id);
+//     db.collection('computadoras').doc(id).delete();
+//   }
+// });
