@@ -10,7 +10,7 @@ const computers = document.querySelector('.computers');
 const renderComputer = (data, id) => {
 
   const html = `
-    <div class="card-panel col s4 blue darken-3 data-id="${id}">
+    <div class="card-panel col s4 blue darken-3" data-id="${id}">
       <img src="/img/desktop.png" alt="computer">
       <div class="computer-details center">
         <div class="computer-title"><i class="material-icons">person</i> ${data.nombre}</div>
@@ -40,4 +40,4 @@ const renderComputer = (data, id) => {
 const removeComputer = (id) => {
   const computer = document.querySelector(`.info[data-id=${id}]`);
   computer.remove();
-};
+};0
