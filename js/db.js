@@ -1,6 +1,6 @@
 // real-time listener
 db.collection('computadoras').onSnapshot(snapshot => {
-  //console.log(snapshot.docChanges());
+  console.log(snapshot.docChanges());
   snapshot.docChanges().forEach(change => {
     //console.log(change.type, change.doc.id, change.doc.data());
     if(change.type === 'added'){
@@ -8,6 +8,9 @@ db.collection('computadoras').onSnapshot(snapshot => {
     }
     if(change.type === 'removed'){
       //removeComputer(change.doc.id);
+    }
+    if(change.type === 'update'){
+      editComputer(change.doc.data(), change.doc.id);
     }
   });
 });
